@@ -47,11 +47,11 @@ class CaptionWindow(QWidget):
     def initUI(self):
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
-        self.setGeometry(1200, 800, 400, 100)  # Position at bottom-right
+        self.setGeometry(800, 700, 600, 150)  # Increase width and height for better readability
 
         self.label = QLabel("Listening...", self)
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.label.setStyleSheet("font-size: 20px; color: white; background-color: black; padding: 10px; border-radius: 10px;")
+        self.label.setStyleSheet("font-size: 24px; color: white; background-color: black; padding: 15px; border-radius: 10px;")
 
         self.timer = QTimer()
         self.timer.timeout.connect(self.update_transcription)
